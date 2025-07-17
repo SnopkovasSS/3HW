@@ -36,37 +36,46 @@ public class Main {
             byte teacherAs = 27;
             byte teacherLpEa = 30;
             int totalStudents = teacherLp + teacherAs + teacherLpEa;
-            System.out.println ("Всего учеников" + totalStudents);
+            System.out.println("Всего учеников" + totalStudents);
             int paper = 480;
             int oneStudentsPaper = paper / totalStudents;
             System.out.println("На каждого ученика рассчитано" + oneStudentsPaper);
 
+            // Задание 4 //
+
             byte bottlesInTwoMinutes = 16;
-            int oneMinute = bottlesInTwoMinutes / 2;
-            System.out.println ("За одну минуту  машина произвела " + oneMinute +  " бутылок");
-            int twentyMinutes = bottlesInTwoMinutes / 2 * 20;
-            System.out.println("За двадцать минут машина произвела " + twentyMinutes + " бутылок");
-            int minutesPerDay = 24 * 60;
-            minutesPerDay = minutesPerDay * oneMinute;
-            System.out.println("В сутки машина произвела " + minutesPerDay +  " бутылок");
-            minutesPerDay = minutesPerDay * 3;
-            System.out.println("За строе суток машина произвела " + minutesPerDay +  " бутылок");
-            minutesPerDay = minutesPerDay * 30;
-            System.out.println("За месяц машина произвела " + minutesPerDay +  " бутылок");
+            byte TwoMinutes = 2;
+            int oneMinute = bottlesInTwoMinutes / TwoMinutes; // производительсноть машины за 1 мин.
+            System.out.println("За одну минуту  машина произвела " + oneMinute + " бутылок");
+            byte Twenty = 20;
+            int twentyTotal = Twenty * oneMinute ; // производительность машины за 20 минут
+            System.out.println("За двадцать минут машина произвела " + twentyTotal + " бутылок");
+            int Sutki = 24;
+            int minutesPerDay = Sutki * 60; // минут в сутках
+            minutesPerDay = minutesPerDay * oneMinute; // производительность машины в сутки
+            System.out.println("В сутки машина произвела " + minutesPerDay + " бутылок");
+            int Day = 3;
+            minutesPerDay = Day * Sutki * 60; // минут в 3-х сутках;
+            Day = minutesPerDay * oneMinute; // производительноть машины за трое суток
+            System.out.println("За строе суток машина произвела " + Day + " бутылок");
+            int MontDay = 30;
+            MontDay = minutesPerDay * MontDay; // миут в сутках
+            int MontDayTotal = MontDay * oneMinute;
+            System.out.println("За месяц машина произвела " + MontDayTotal + " бутылок");
 
             byte TotalForThePaintSchool = 120;
             byte ForOneCclassOfCansOfWhitePaint = 2;
             byte ForOneCclassOfCansOfBrownPaint = 4;
             int TotalOneClass = ForOneCclassOfCansOfWhitePaint + ForOneCclassOfCansOfBrownPaint;
-            System.out.println ("На один класс уходит " + TotalOneClass + " банок краски");
+            System.out.println("На один класс уходит " + TotalOneClass + " банок краски");
             int ForHowManyClasses = TotalForThePaintSchool / TotalOneClass;
-            System.out.println (TotalForThePaintSchool + " банок краски уходит на " +  ForHowManyClasses + " классов " );
+            System.out.println(TotalForThePaintSchool + " банок краски уходит на " + ForHowManyClasses + " классов ");
             byte WhitePaint = (byte) (ForOneCclassOfCansOfWhitePaint * ForHowManyClasses);
             byte BrownPaint = (byte) (ForOneCclassOfCansOfBrownPaint * ForHowManyClasses);
-            System.out.println ("В школе, где " + ForHowManyClasses + " классов, нужно " + WhitePaint + " банок белой краски и " + BrownPaint + " банок коричневой краски");
+            System.out.println("В школе, где " + ForHowManyClasses + " классов, нужно " + WhitePaint + " банок белой краски и " + BrownPaint + " банок коричневой краски");
 
 
-            byte Bananas  = 5;
+            byte Bananas = 5;
             byte BananasOneGramm = 80;
             int Milk = 200;
             int Milk100MlInGramm = 105;
@@ -75,21 +84,21 @@ public class Main {
             byte IceCreamOne = 100;
             byte Eggs = 4;
             byte EggsOne = 70;
-            int TotalGr = (Bananas *BananasOneGramm) + TotalMilkGramm + (IceCreamOne * IceCream) + (EggsOne *Eggs);
-            System.out.println  (TotalGr + "  граммов спортзавтрака ");
-            Float BreakfastInKg  = 1000F;
+            int TotalGr = (Bananas * BananasOneGramm) + TotalMilkGramm + (IceCreamOne * IceCream) + (EggsOne * Eggs);
+            System.out.println(TotalGr + "  граммов спортзавтрака ");
+            Float BreakfastInKg = 1000F;
             Float TotalKg = TotalGr / BreakfastInKg;
-            System.out.println (TotalKg + " Кг спортзавтрака");
+            System.out.println(TotalKg + " Кг спортзавтрака");
 
             byte MinusKg = 7;
             int MinusGr = MinusKg * 1000;
-            System.out.println (MinusGr + " граммов нужно скорректировать вес в меньшую сторону");
+            System.out.println(MinusGr + " граммов нужно скорректировать вес в меньшую сторону");
             int Day250G = MinusGr / 250;
-            System.out.println (Day250G + " дней уйдет на похудение при потере 250 граммов в день" );
-            int Day500G = MinusGr/500;
-            System.out.println (Day500G + " дней уйдет на похудение при потере 500 граммов в день" );
+            System.out.println(Day250G + " дней уйдет на похудение при потере 250 граммов в день");
+            int Day500G = MinusGr / 500;
+            System.out.println(Day500G + " дней уйдет на похудение при потере 500 граммов в день");
             int AverageOfDays = (Day250G + Day500G) / 2;
-            System.out.println (AverageOfDays + " день может потребоваться в среднем, чтобы добиться результата похудения.");
+            System.out.println(AverageOfDays + " день может потребоваться в среднем, чтобы добиться результата похудения.");
 
             //Задача 8//
             int Masha = 67760;
@@ -98,39 +107,23 @@ public class Main {
             int Percent = 10;
             int MashaPercent = (Masha / 100) * Percent;
             int TotalMasha = Masha + MashaPercent;
-            Masha  = ((Masha + MashaPercent)*12) - (Masha * 12);
-            System.out.println ( "на " + MashaPercent + " руб. увеличена ЗП для Маши в месяц");
-            System.out.println ("Маша теперь получает " + TotalMasha +  " рублей. Годовой доход вырос на " + Masha + " рублей");
-
+            Masha = ((Masha + MashaPercent) * 12) - (Masha * 12);
+            System.out.println("на " + MashaPercent + " руб. увеличена ЗП для Маши в месяц");
+            System.out.println("Маша теперь получает " + TotalMasha + " рублей. Годовой доход вырос на " + Masha + " рублей");
 
 
             int DenisPercent = (Denis / 100) * Percent;
             int TotalDenis = Denis + DenisPercent;
-            Denis  = ((Denis + DenisPercent)*12) - (Denis* 12);
-            System.out.println ( "на " + DenisPercent + " руб. увеличена ЗП для Дениса в месяц");
-            System.out.println ("Денис теперь получает " + TotalDenis +  " рублей. Годовой доход вырос на " + Denis  + " рублей");
+            Denis = ((Denis + DenisPercent) * 12) - (Denis * 12);
+            System.out.println("на " + DenisPercent + " руб. увеличена ЗП для Дениса в месяц");
+            System.out.println("Денис теперь получает " + TotalDenis + " рублей. Годовой доход вырос на " + Denis + " рублей");
 
 
             int KristinaPercent = (Kristina / 100) * Percent;
             int KristinaTotal = Kristina + KristinaPercent;
-            Kristina  = ((Kristina + KristinaPercent)*12) - (Kristina* 12);
-            System.out.println ( "на " + KristinaPercent + " рублей увеличена ЗП для Крестины в месяц");
-            System.out.println ("Крестина теперь получает " + KristinaTotal +  " рублей. Годовой доход вырос на " + Kristina + " рублей");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            Kristina = ((Kristina + KristinaPercent) * 12) - (Kristina * 12);
+            System.out.println("на " + KristinaPercent + " рублей увеличена ЗП для Крестины в месяц");
+            System.out.println("Крестина теперь получает " + KristinaTotal + " рублей. Годовой доход вырос на " + Kristina + " рублей");
 
 
         }
